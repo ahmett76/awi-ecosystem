@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> The AWI — Artificial Wisdom Intelligence</title>
-  <meta name="description" content=" The AWI — Artificial Wisdom Intelligence. Exploring the architecture beyond artificial intelligence.">
+  <title>The AWI — Artificial Wisdom Intelligence</title>
+  <meta name="description" content="The AWI — Artificial Wisdom Intelligence. Exploring the architecture beyond artificial intelligence.">
   <meta name="theme-color" content="#06080F">
 
   <!-- Tailwind CSS -->
@@ -131,17 +131,17 @@
     /* NAVIGATION LINKS */
     .nav-links {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
     }
     .nav-links a {
       font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       color: #94a3b8;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-decoration: none;
-      padding: 6px 14px;
+      padding: 6px 12px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 40px;
       transition: all 0.3s ease;
@@ -152,6 +152,22 @@
       border-color: rgba(168, 85, 247, 0.4);
       background: rgba(168, 85, 247, 0.08);
       box-shadow: 0 0 20px rgba(168, 85, 247, 0.06);
+    }
+    .nav-links a.genesis-link {
+      color: #10B981;
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+    .nav-links a.genesis-link:hover {
+      border-color: rgba(16, 185, 129, 0.6);
+      background: rgba(16, 185, 129, 0.08);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.06);
+    }
+
+    /* CARD LINK */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     /* MANIFESTO */
@@ -199,20 +215,26 @@
 
     .footer-links {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
     }
     .footer-links a {
       font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       color: #64748b;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     .footer-links a:hover {
       color: #ffffff;
+    }
+    .footer-links a.genesis-link {
+      color: #10B981;
+    }
+    .footer-links a.genesis-link:hover {
+      color: #34D399;
     }
 
     @media (max-width: 640px) {
@@ -253,6 +275,7 @@
           Artificial Wisdom Intelligence
         </div>
         <div class="nav-links">
+          <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
           <a href="https://www.theagimind.com/" target="_blank">AGI</a>
           <a href="https://www.theasimind.com/" target="_blank">ASI</a>
         </div>
@@ -398,106 +421,118 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
 
         <!-- MIND -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="mind.png" alt="AWI Mind" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
-              01 / COGNITION
+        <a href="awimind.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="mind.png" alt="AWI Mind" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Mind</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              The cognitive dimension of artificial wisdom —
-              exploring thought, consciousness, reasoning and meaning.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
+                01 / COGNITION
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Mind</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                The cognitive dimension of artificial wisdom —
+                exploring thought, consciousness, reasoning and meaning.
+              </p>
+            </div>
+          </article>
+        </a>
 
         <!-- CORE -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="core.png" alt="AWI Core" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
-              02 / FOUNDATION
+        <a href="awicore.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="core.png" alt="AWI Core" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Core</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              The foundational layer — where intelligence,
-              reasoning and computational architecture converge.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
+                02 / FOUNDATION
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Core</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                The foundational layer — where intelligence,
+                reasoning and computational architecture converge.
+              </p>
+            </div>
+          </article>
+        </a>
 
         <!-- HUB -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="hub.png" alt="AWI Hub" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
-              03 / ECOSYSTEM
+        <a href="awihub.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="hub.png" alt="AWI Hub" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Hub</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              A convergence point for ideas, people, systems
-              and knowledge within the AWI ecosystem.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
+                03 / ECOSYSTEM
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Hub</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                A convergence point for ideas, people, systems
+                and knowledge within the AWI ecosystem.
+              </p>
+            </div>
+          </article>
+        </a>
 
         <!-- DEEP -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="deep.png" alt="AWI Deep" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
-              04 / DEPTH
+        <a href="awideep.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="deep.png" alt="AWI Deep" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Deep</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              Exploring deeper intelligence, advanced learning,
-              complex reasoning and the search for meaningful knowledge.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
+                04 / DEPTH
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Deep</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                Exploring deeper intelligence, advanced learning,
+                complex reasoning and the search for meaningful knowledge.
+              </p>
+            </div>
+          </article>
+        </a>
 
         <!-- SAFE -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="safe.png" alt="AWI Safe" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
-              05 / TRUST
+        <a href="awisafe.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="safe.png" alt="AWI Safe" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Safe</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              The responsibility layer — focused on safety,
-              ethics, trust and the responsible development of intelligence.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
+                05 / TRUST
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Safe</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                The responsibility layer — focused on safety,
+                ethics, trust and the responsible development of intelligence.
+              </p>
+            </div>
+          </article>
+        </a>
 
         <!-- SYSTEMS -->
-        <article class="card glass rounded-2xl overflow-hidden">
-          <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
-            <img src="systems.png" alt="AWI Systems" class="max-h-full max-w-full object-contain">
-          </div>
-          <div class="p-6">
-            <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
-              06 / APPLICATION
+        <a href="awisystems.html" class="card-link">
+          <article class="card glass rounded-2xl overflow-hidden">
+            <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
+              <img src="systems.png" alt="AWI Systems" class="max-h-full max-w-full object-contain">
             </div>
-            <h3 class="text-xl font-bold mb-3">AWI Systems</h3>
-            <p class="text-sm text-slate-400 leading-6">
-              The applied layer — translating the principles
-              of artificial wisdom into scalable intelligent systems.
-            </p>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
+                06 / APPLICATION
+              </div>
+              <h3 class="text-xl font-bold mb-3">AWI Systems</h3>
+              <p class="text-sm text-slate-400 leading-6">
+                The applied layer — translating the principles
+                of artificial wisdom into scalable intelligent systems.
+              </p>
+            </div>
+          </article>
+        </a>
 
       </div>
 
@@ -547,7 +582,7 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-3">
 
       <div class="text-sm font-semibold tracking-widest">
-         The AWI<span class="text-purple-400">.</span>
+        AWI<span class="text-purple-400">.</span>
       </div>
 
       <div class="flex items-center gap-4 flex-wrap">
@@ -555,6 +590,7 @@
           Exploring the architecture of artificial wisdom
         </div>
         <div class="footer-links">
+          <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
           <a href="https://www.theagimind.com/" target="_blank">AGI</a>
           <a href="https://www.theasimind.com/" target="_blank">ASI</a>
         </div>
