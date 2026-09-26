@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The AWI — Artificial Wisdom Intelligence</title>
-  <meta name="description" content="The AWI — Artificial Wisdom Intelligence. Exploring the architecture beyond artificial intelligence.">
-  <meta name="theme-color" content="#06080F">
-
-  <!-- Tailwind CSS -->
+  <title>THE AWI — Artificial Wisdom Intelligence</title>
+  <meta name="description" content="THE AWI — Exploring a proposed architectural direction for artificial wisdom intelligence.">
+  <meta name="theme-color" content="#05070D">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #06080f;
-      --panel: rgba(13, 17, 29, 0.72);
+      --bg: #05070D;
+      --panel: rgba(12, 16, 27, 0.74);
       --line: rgba(255, 255, 255, 0.08);
-      --muted: #94a3b8;
-      --blue: #38bdf8;
-      --purple: #a855f7;
-      --green: #10b981;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --accent-blue: #38BDF8;
+      --accent-purple: #A855F7;
+      --accent-green: #10B981;
     }
 
     html {
@@ -33,11 +30,23 @@
     body {
       margin: 0;
       background:
-        radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.10), transparent 35%),
-        radial-gradient(circle at 90% 45%, rgba(168, 85, 247, 0.08), transparent 30%),
-        radial-gradient(circle at 10% 75%, rgba(16, 185, 129, 0.06), transparent 30%),
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(56, 189, 248, 0.10),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 90% 45%,
+          rgba(168, 85, 247, 0.08),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(16, 185, 129, 0.06),
+          transparent 30%
+        ),
         var(--bg);
-      color: white;
+      color: var(--text-primary);
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
@@ -47,12 +56,13 @@
     }
 
     .gradient-text {
-      background: linear-gradient(
-        120deg,
-        #38bdf8 0%,
-        #a855f7 48%,
-        #10b981 100%
-      );
+      background:
+        linear-gradient(
+          120deg,
+          #38BDF8 0%,
+          #A855F7 50%,
+          #10B981 100%
+        );
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -67,23 +77,41 @@
 
     .grid-bg {
       background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
       background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
-      -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black 0%,
+          transparent 75%
+        );
+      -webkit-mask-image:
+        linear-gradient(
+          to bottom,
+          black 0%,
+          transparent 75%
+        );
     }
 
     .orb {
       position: absolute;
-      width: 420px;
-      height: 420px;
+      width: 460px;
+      height: 460px;
       border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(168, 85, 247, 0.10),
-        transparent 68%
-      );
+      background:
+        radial-gradient(
+          circle,
+          rgba(16, 185, 129, 0.11),
+          transparent 68%
+        );
       pointer-events: none;
     }
 
@@ -96,8 +124,10 @@
 
     .card:hover {
       transform: translateY(-6px);
-      border-color: rgba(168, 85, 247, 0.35);
-      background: rgba(17, 22, 37, 0.88);
+      border-color:
+        rgba(16, 185, 129, 0.35);
+      background:
+        rgba(17, 22, 37, 0.90);
     }
 
     .logo-box {
@@ -105,16 +135,18 @@
         radial-gradient(
           circle at center,
           rgba(255,255,255,0.045),
-          rgba(0,0,0,0.35)
+          rgba(0,0,0,0.36)
         );
     }
 
     .fade-up {
-      animation: fadeUp 0.9s ease both;
+      animation:
+        fadeUp 0.9s ease both;
     }
 
     .fade-up-delay {
-      animation: fadeUp 1s 0.15s ease both;
+      animation:
+        fadeUp 1s 0.15s ease both;
     }
 
     @keyframes fadeUp {
@@ -149,9 +181,9 @@
     }
     .nav-links a:hover {
       color: #ffffff;
-      border-color: rgba(168, 85, 247, 0.4);
-      background: rgba(168, 85, 247, 0.08);
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.06);
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.08);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.06);
     }
     .nav-links a.genesis-link {
       color: #10B981;
@@ -182,13 +214,13 @@
       transition: border-color 0.4s ease, box-shadow 0.4s ease;
     }
     .manifesto-box:hover {
-      border-color: rgba(168, 85, 247, 0.3);
-      box-shadow: 0 0 40px rgba(168, 85, 247, 0.06);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.06);
     }
     .manifesto-tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
-      color: var(--purple);
+      color: var(--accent-green);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 20px;
@@ -205,7 +237,7 @@
       font-weight: 600;
     }
     .manifesto-content em {
-      color: var(--green);
+      color: var(--accent-green);
       font-style: normal;
       font-weight: 500;
       display: block;
@@ -258,17 +290,24 @@
 
 <body class="min-h-screen">
 
-  <!-- Background -->
+  <!-- BACKGROUND -->
   <div class="fixed inset-0 pointer-events-none overflow-hidden">
     <div class="grid-bg absolute inset-0"></div>
-    <div class="orb -top-40 left-1/2 -translate-x-1/2"></div>
+    <div
+      class="orb"
+      style="
+        top: -230px;
+        left: 50%;
+        transform: translateX(-50%);
+      "
+    ></div>
   </div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 py-6">
     <div class="flex items-center justify-between flex-wrap gap-4">
       <div class="text-2xl sm:text-3xl font-extrabold tracking-[0.18em]">
-        The AWI<span class="text-purple-400">.</span>
+        THE AWI<span class="text-emerald-400">.</span>
       </div>
       <div class="flex items-center gap-4 flex-wrap">
         <div class="mono text-[9px] sm:text-[10px] tracking-[0.22em] uppercase text-slate-400">
@@ -283,184 +322,143 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- MAIN -->
   <main class="relative z-10">
 
+    <!-- HERO -->
     <section class="max-w-6xl mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-24 text-center">
-
       <div class="fade-up">
-
         <div class="mono inline-flex items-center gap-2 text-[10px] sm:text-xs tracking-[0.3em] uppercase text-slate-400 mb-7">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          A New Layer of Intelligence
+          A Proposed Direction
         </div>
-
-        <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-[-0.04em] leading-[0.95]">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-[-0.045em] leading-[0.94]">
           Artificial
           <br>
           <span class="gradient-text">Wisdom.</span>
         </h1>
-
         <p class="mt-8 text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          AWI explores a proposed direction alongside advanced artificial intelligence —
-          where capability is considered together with context,
-          responsibility, restraint, and meaning.
+          AWI explores a proposed direction alongside advanced artificial
+          intelligence — where capability is considered together with
+          context, responsibility, restraint, and meaning.
         </p>
-
       </div>
 
-      <!-- Philosophy -->
+      <!-- PHILOSOPHY -->
       <div class="fade-up-delay mt-12 sm:mt-14">
-
         <div class="glass rounded-2xl max-w-3xl mx-auto px-6 py-7 sm:px-10 sm:py-9">
-
           <p class="text-lg sm:text-xl md:text-2xl font-semibold leading-relaxed">
             “Intelligence processes data.
             <span class="gradient-text">Wisdom creates meaning.</span>”
           </p>
-
           <p class="mono text-[10px] sm:text-xs tracking-[0.18em] uppercase text-slate-500 mt-5">
             The idea behind AWI
           </p>
-
-          <div class="text-sm md:text-base text-gray-400 tracking-wide mt-4">
-            <span class="text-purple-400 font-semibold">AW</span> — Artificial Wisdom
-            <span class="mx-2 text-gray-700">•</span>
-            <span class="text-emerald-400 font-semibold">AWI</span> — Artificial Wisdom Intelligence.
-            AW is the broader vision; AWI is a proposed architectural direction for giving that vision technical and governance form.
-          </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- MANIFESTO / AWI -->
+    <!-- MANIFESTO / THE AWI -->
     <div class="max-w-4xl mx-auto px-5 sm:px-8">
       <div class="manifesto-box">
         <span class="manifesto-tag">MANIFESTO</span>
         <div class="manifesto-content">
           <p>
-            <strong>Beyond Capability</strong><br><br>
-            Intelligence processes data.
-            Wisdom creates meaning.<br><br>
-            Artificial Wisdom Intelligence explores a proposed architectural direction<br>
-            in which capability is considered together with context,<br>
-            responsibility, uncertainty, judgment, and restraint.<br><br>
-            <strong>AW</strong> is the broader vision.
-            <strong>AWI</strong> is a proposed direction for giving that vision architectural form —
-            cognition with context, power with responsibility,<br>
-            scale with judgment.<br><br>
-            This is not a replacement for AI, AGI, or ASI,<br>
-            nor is it proposed as a chronological stage after them.<br>
-            It asks a complementary question:<br>
-            <em>“what comes after intelligence<br>
-            when understanding matters as much as computation?”</em><br><br>
-            Intelligence processes data.<br>
-            <strong>Wisdom creates meaning.</strong>
+            Artificial Wisdom Intelligence explores a proposed architectural
+            direction in which capability is considered together with context,
+            responsibility, uncertainty, judgment, and restraint. AW is the
+            broader vision; AWI is a proposed direction for giving that vision
+            architectural form.<br><br>
+
+            This is not a replacement for AI, AGI, or ASI, nor is it proposed
+            as a chronological stage after them. It asks a complementary
+            question: <strong>what comes after intelligence when understanding
+            matters as much as computation?</strong>
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Introduction -->
+    <!-- CONCEPT -->
     <section class="max-w-4xl mx-auto px-5 sm:px-8 pb-24">
-
       <div class="text-center">
-
-        <div class="mono text-[10px] sm:text-xs tracking-[0.3em] uppercase text-purple-400 mb-5">
+        <div class="mono text-[10px] sm:text-xs tracking-[0.3em] uppercase text-emerald-400 mb-5">
           The Concept
         </div>
-
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
           Beyond Intelligence
         </h2>
-
         <p class="mt-7 text-slate-300 text-base sm:text-lg leading-8">
-          Artificial intelligence has transformed how machines
-          process information, learn patterns and solve problems.
-          AWI explores a deeper question:
-          <span class="text-white font-medium">
-            what happens when intelligence begins to pursue meaning,
-            context, responsibility and wisdom?
-          </span>
+          Artificial intelligence has transformed how machines process
+          information, learn patterns and solve problems. AWI explores a
+          deeper question: what happens when intelligence begins to pursue
+          meaning, context, responsibility and wisdom?
         </p>
-
         <p class="mt-5 text-slate-400 text-base sm:text-lg leading-8">
           AWI is proposed as a conceptual architectural direction in which
           capability is considered alongside meaning, responsibility,
           contextual judgment, uncertainty, and restraint.
         </p>
-
       </div>
-
     </section>
 
-    <!-- Architecture -->
+    <!-- ARCHITECTURE -->
     <section class="max-w-7xl mx-auto px-5 sm:px-8 pb-28">
-
       <div class="text-center mb-12 sm:mb-16">
-
         <div class="mono text-[10px] sm:text-xs tracking-[0.3em] uppercase text-emerald-400 mb-5">
           AWI Architecture
         </div>
-
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-          Nine Proposed Dimensions.
+          Nine Dimensions.
           <span class="gradient-text">One Direction.</span>
         </h2>
-
         <p class="mt-5 text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-          A modular conceptual architecture exploring nine proposed dimensions
-          within the AWI meaning direction.
+          A modular conceptual architecture exploring nine proposed
+          dimensions within the AWI meaning direction.
         </p>
-
       </div>
 
-      <!-- Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
 
-        <!-- 01 / MIND -->
+        <!-- 01 / AWI MIND -->
         <a href="awimind.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="mind.png" alt="AWI Mind" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 01 / COGNITION
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Mind</h3>
               <p class="text-sm text-slate-400 leading-6">
-                An integrative function for contextual interpretation,
-                meaning, and state organization within the AWI sphere,
-                without constituting a privileged command authority.
+                Primary integrative function for artificial wisdom,
+                value preservation, and semantic governance.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 02 / CORE -->
+        <!-- 02 / AWI CORE -->
         <a href="awicore.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="core.png" alt="AWI Core" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 02 / FOUNDATION
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Core</h3>
               <p class="text-sm text-slate-400 leading-6">
-                The foundational layer — where intelligence,
-                reasoning and computational architecture converge.
+                Core ethical constitution, immutable existential
+                principles, and human sovereignty shield.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 03 / HUB -->
+        <!-- 03 / AWI HUB -->
         <a href="awihub.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
@@ -472,34 +470,33 @@
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Hub</h3>
               <p class="text-sm text-slate-400 leading-6">
-                A coordination interface for ideas, people, systems,
-                and knowledge within the AWI ecosystem, without
-                displacing external human or institutional authority.
+                Human-AI partnership interface and
+                Cognitive Sovereignty hub.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 04 / DEEP -->
+        <!-- 04 / AWI DEEP -->
         <a href="awideep.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="deep.png" alt="AWI Deep" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 04 / DEPTH
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Deep</h3>
               <p class="text-sm text-slate-400 leading-6">
-                Exploring deeper intelligence, advanced learning,
-                complex reasoning and the search for meaningful knowledge.
+                Deep semantic evaluation, contextual ethics,
+                and long-term impact forecasting.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 05 / FOLD (YENİ) -->
+        <!-- 05 / AWI FOLD -->
         <a href="awifold.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
@@ -510,15 +507,15 @@
                 05 / HARMONY
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Fold</h3>
-              <div class="card-slogan">Complexity finds balance, the harmony of wisdom.</div>
               <p class="text-sm text-slate-400 leading-6">
-                Exploring how complex, high-dimensional societal and systemic tensions might be represented and negotiated through contextual integration.
+                Synthesis of cultural values, pluralistic ethics,
+                and multi-perspective integration.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 06 / SAFE -->
+        <!-- 06 / AWI SAFE -->
         <a href="awisafe.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
@@ -530,148 +527,118 @@
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Safe</h3>
               <p class="text-sm text-slate-400 leading-6">
-                A proposed direction for safety, ethical constraints,
-                trust, and governance-oriented requirements in the responsible development of intelligence.
+                Existential safety nets, crisis buffers,
+                and human safety guarantees.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 07 / VOID (YENİ) -->
+        <!-- 07 / AWI VOID -->
         <a href="awivoid.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="awivoid.png" alt="AWI Void" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-purple-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 07 / LIMITS
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Void</h3>
-              <div class="card-slogan">The Wisdom of Ignorance.</div>
               <p class="text-sm text-slate-400 leading-6">
-                A proposed mechanism for representing epistemic uncertainty,
-                acknowledging cognitive and normative limits, and supporting deliberate pause or restraint.
+                Socratic Center — mapping ethical uncertainty
+                and executing deliberate Socratic Pauses.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 08 / SENTRY (YENİ) -->
+        <!-- 08 / AWI SENTRY -->
         <a href="awisentry.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="awisentry.png" alt="AWI Sentry" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 08 / VIGILANCE
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Sentry</h3>
-              <div class="card-slogan">Wisdom, not only protects; it observes and warns.</div>
               <p class="text-sm text-slate-400 leading-6">
-                A proposed monitoring function for identifying potential value drift
-                against specified ethical and governance constraints across active decision ecosystems.
+                Asynchronous Shadow Auditing and
+                independent value drift monitor.
               </p>
             </div>
           </article>
         </a>
 
-        <!-- 09 / SYSTEMS -->
+        <!-- 09 / AWI SYSTEMS -->
         <a href="awisystems.html" class="card-link">
           <article class="card glass rounded-2xl overflow-hidden">
             <div class="logo-box h-48 sm:h-52 flex items-center justify-center p-6">
               <img src="systems.png" alt="AWI Systems" class="max-h-full max-w-full object-contain">
             </div>
             <div class="p-6">
-              <div class="mono text-[10px] tracking-[0.22em] text-blue-400 mb-3">
+              <div class="mono text-[10px] tracking-[0.22em] text-emerald-400 mb-3">
                 09 / APPLICATION
               </div>
               <h3 class="text-xl font-bold mb-3">AWI Systems</h3>
               <p class="text-sm text-slate-400 leading-6">
-                An applied direction exploring how AWI principles
-                might inform scalable intelligent systems without implying a single required implementation.
+                Holistic ecosystem governance, legal liability shield,
+                and regulatory compliance.
               </p>
             </div>
           </article>
         </a>
 
       </div>
-
     </section>
 
-    <!-- Closing Statement -->
+    <!-- FINAL QUESTION -->
     <section class="max-w-5xl mx-auto px-5 sm:px-8 pb-28">
-
       <div class="glass rounded-3xl px-6 py-12 sm:px-12 sm:py-16 text-center relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-purple-500/5 via-transparent to-emerald-500/5"></div>
-
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-emerald-500/5 via-transparent to-blue-500/5"></div>
         <div class="relative">
-
           <div class="mono text-[10px] sm:text-xs tracking-[0.3em] uppercase text-slate-500 mb-6">
             A Question for the Future
           </div>
-
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            What comes
-            <span class="gradient-text">after intelligence?</span>
+            What happens when intelligence
+            <span class="gradient-text">pursues meaning?</span>
           </h2>
-
           <p class="mt-7 text-slate-300 max-w-2xl mx-auto leading-7 sm:leading-8 text-sm sm:text-base">
-            AWI is an exploration of that question.
-            Not a replacement for artificial intelligence,
-            but a vision for what intelligence might become
-            when understanding, context and responsibility
-            matter as much as computation.
+            AWI is an exploration of that question. Not a replacement for
+            artificial intelligence, but a vision for what intelligence might
+            become when understanding, context and responsibility matter
+            as much as computation.
           </p>
-
           <div class="mt-10 mono text-[10px] sm:text-xs tracking-[0.25em] uppercase text-slate-500">
             AWI / Artificial Wisdom Intelligence
           </div>
-
         </div>
-
       </div>
-
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="relative z-10 border-t border-white/5">
-
     <div class="max-w-7xl mx-auto px-5 sm:px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-3">
-
       <div class="text-sm font-semibold tracking-widest">
-        The AWI<span class="text-purple-400">.</span>
+        THE AWI<span class="text-emerald-400">.</span>
       </div>
-
       <div class="flex items-center gap-4 flex-wrap">
-        <div class="mono text-[9px] sm:text-[10px] tracking-[0.15em] text-slate-600 uppercase text-center">
-          Exploring the architecture of artificial wisdom
-        </div>
         <div class="footer-links">
           <a href="https://www.themindgenesis.com/" target="_blank" class="genesis-link">TMG</a>
           <a href="https://www.theagimind.com/" target="_blank">AGI</a>
           <a href="https://www.theasimind.com/" target="_blank">ASI</a>
         </div>
       </div>
-
       <div class="mono text-[9px] sm:text-[10px] text-slate-600">
-        © 2026
+        © 2026 The Mind Genesis
       </div>
-
     </div>
-
   </footer>
-
-  <!-- LEGAL FOOTER -->
-  <div style="text-align: center; padding: 12px 0; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.5px; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.05);">
-    <a href="https://www.themindgenesis.com/legal.html" style="color: inherit; text-decoration: none;">
-        © 2026 The Mind Genesis. All rights reserved.
-    </a>
-</div>
 
 </body>
 </html>
